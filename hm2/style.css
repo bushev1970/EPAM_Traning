@@ -1,0 +1,77 @@
+h2, span {
+	font-family: 'Tahoma';
+}
+p, h2 {
+	margin: 0;
+}
+p {
+	color: red;
+}
+hr {
+	height: 2px;
+	background: black;
+}
+.form-block {
+	position: relative;
+	margin: 1rem 0;
+}
+.form-block input {
+	width: 14rem;
+	font-size: 1.1rem;
+}
+.hint {
+	position: relative;
+	margin-left: 3rem;
+	opacity: .7;
+	color: white;
+	font-weight: bold;
+	font-size: .7rem;
+	padding: 5px 10px;
+	background: #FF1010;
+}
+.hint:before {
+	content: '';
+	position: absolute;
+	height: 0;
+	width: 0;
+	border: 7px solid transparent;
+    border-right: 10px solid #FF1010;
+	bottom: 25%;
+	left: -15px;
+}
+.form-block input ,.form-block textarea {
+	outline: none;
+	padding: 7px;
+	border: 2px solid rgba(55, 55, 0, 0.5);
+	border-radius: 5px;
+}
+.form-el {
+	display: inline-block;
+	width: 7rem;
+}
+.form-el span {
+	position: absolute;
+	top: 0px;
+	font-size: .9rem;
+	font-weight: bold;
+}
+input[type="submit"] {
+	cursor: pointer;
+	font-size: 0.8rem;
+	border-radius: 5px;
+	border: 2px solid rgba(55, 55, 0, 0.5);
+	margin-left: 7rem;
+	font-weight: bold;
+	width: 6rem;
+	height: 2rem;
+}
+textarea {
+	font-size: 1.1rem;
+	font-weight: bold;
+	height: 5rem;
+	width: 20rem;
+}
+.form-block input::-webkit-input-placeholder {opacity: 0.5}
+.form-block input::-moz-placeholder          {opacity: 0.5}/* Firefox 19+ */
+.form-block input:-moz-placeholder           {opacity: 0.5}/* Firefox 18- */
+.form-block input:-ms-input-placeholder      {opacity: 0.5}
