@@ -1,0 +1,204 @@
+p, li, input ,h3{
+	font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HEADER*/
+.header-min {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+nav i {
+	cursor: pointer;
+	font-size: 3rem;
+}
+.search {
+	height: 1.5rem;
+	width: 25%;
+	position: relative;
+}
+.search input[type="text"]{
+	border: none;
+	height: 1.5rem;
+	font-size: .9rem;
+	position: absolute;
+	width: 85%;
+	padding-left: 15%;
+	outline: none;
+}
+.search button {
+	cursor: pointer;
+	width: 1.3rem;
+	font-size: 1.3rem;
+	outline: none;
+	border:  none;
+	background: transparent;
+	position: absolute;
+	left: 0%;
+	margin-top:2px;
+	opacity: .4;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+.search button:hover {
+	opacity: 1;
+}
+
+.search i {
+	margin-left: -50%;
+}
+.images img {
+	width: 100%;
+}
+
+/* INFO */
+.info{
+	width: 80%;
+	margin-left: 10%;
+}
+.info__box {
+	margin-top: 3rem;
+}
+.info__box img {
+	float: left;
+	width: 10rem;
+	padding-right: 5%;
+}
+.info__box p {
+	margin-left: 20%;
+}
+.info__box p, .info__box h3 {
+	color: gray;
+}
+.header-min ul, .header__contact {
+		display: none;
+	}
+.slider {
+	display: none;
+}
+/* MEDIA */
+@media only screen and (min-width: 768px)  {
+/* HEADER */
+	
+	.logo-des{
+		margin: 2rem 0rem 0 10%;
+	}
+	.contacts{
+		margin-top: 5px;
+		margin-right: 10%;
+		float: right;
+	}
+	.contacts span {
+		cursor: pointer;
+		position: relative;
+		font-size: 1.4rem;
+		color: gray;
+		-webkit-transition: all .4s ease;
+		-o-transition: all .4s ease;
+		transition: all .4s ease;
+	}
+	.contacts span:hover {
+		color: #60abf8;
+	}
+	.contacts span:hover:after {
+		position: absolute;
+		top: -2.2rem;
+		left: -2.5rem;
+		content: "Saudi Arabla. Alreyadah";
+		width: 6.2rem;
+		font-style: normal;
+		padding: 4px;
+		color: gray;
+		border: 1px solid gray;
+		border-radius: 2px;
+		font-size: 10px;
+	}
+	.contacts span:hover:before {
+		content: '';
+		position: absolute;
+		top: -.9rem;
+		left: 20%;
+		border: 10px solid transparent;
+		border-top: 10px solid gray;
+	}
+	.contacts span:nth-child(2){
+		border-right: 1px solid gray;
+		border-left: 1px solid gray;
+	}
+	.header__contact hr {
+		color: gray;
+	}
+	nav {
+		width: 70%;
+	}
+	.header-min ul li {
+		list-style: none;
+		font-size: .8rem;
+	}
+	.header-min a {
+		text-decoration: none;
+		color: gray;
+	}
+	.header-min ul, .header__contact {
+		display: block;
+	}
+	.icon-menu , .logo {
+		display: none;
+	}
+	.header-min ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+	}
+	.images {
+		position: relative;
+	}
+	.slider {
+		display: block;
+		background: gray;
+		position: absolute;
+		bottom: 20%;
+		right: 10%;
+		width: 35rem;
+		padding: 0;
+	}
+	.slider img{
+		display: inline-block;
+		height: 10rem;
+		width: 43%;
+	}
+	.slider i {
+		-webkit-transform: translateY(-250%);
+		-ms-transform: translateY(-250%);
+		transform: translateY(-250%);
+		font-size: 1.5rem;
+		width: 4%;
+		margin-left: 1rem;
+		display: inline-block;
+	}
+	.info {
+		margin-left: 5%;
+		width: 90%;
+	}
+	.info__box {
+
+		display: inline-block;
+	}
+	.info__box p {
+		margin-left: 0;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.header-min ul li {
+		font-size: 1rem;
+	}
+}
+}
