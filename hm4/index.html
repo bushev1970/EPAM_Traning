@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <title>Humble blog</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
   </head>
-  <body class="flex-container">
-        <!-- <i class="fas fa-bars"></i> -->
-        <!-- <i class="fas fa-tags"></i> -->
-        <!-- <i class="fas fa-list-ul"></i> -->
-        <!-- <i class="far fa-comment"></i> -->
-        <header class="flex-container__header">
+  <body> 
+    <div class="flex-container">
+      <div class="flex-container__line">
+           <header class="flex-container__header">
 
           <aside class="flex-header">
-            <h1 class="flex-header__title"><pre>Theme
-                     preview</pre></h1>
-                     <p class="flex-header__info">Previding Another WordPress using</p>
+            <h1 class="flex-header__title"><pre>Theme 
+preview</pre></h1>
+                  <p class="flex-header__info">Previding Another WordPress using</p>
             <nav class="flex-header__nav">
               <ul class="menu-nav">
                 <li><a href="#">Home</a></li>
@@ -33,18 +33,65 @@
           </time>
           <h1 class="flex-content__title">Worth A Thousand Words</h1>
           <nav class="flex-content__nav">
-
             <ul class="content-nav">
-              <li><a href="#"><i class="fa sfa-bards"></i> uncategorized</a></li>
-              <li><a href="#"><i class="fas fa-tags"></i>boat, lake</a></li>
+              <li class="content-nav__el"><a href="#"><i class="fas fa-list-ul"></i> uncategorized</a></li>
+              <li class="content-nav__el"><a href="#"><i class="fas fa-tags"></i>boat, lake</a></li>
             </ul>
           </nav>
           <article class="flex-content__boat boat">
             <img src="https://boat-parts.com.ua/store/published/publicdata/STORE/attachments/SC/products_pictures/Tuna%20410%20CC%20AL_boat-parts.com.ua_4_enl.jpg" class="boat__img">
-            <span class="boat__logo">boat</span>
-            <em class="boat__logo">boat.</em>
-
+            <span class="boat__logo-center">boat</span>
+            <span class="boat__logo">Boat.<span/>
           </article>
+           <hr class="flex-content__footer">
+           <div class="flex-content">
+
+           <time class="flex-content__date">
+           june 21, 2008 by theme admin
+          </time>
+           <h1 class="flex-content__title">More Tags</h1>
+          <nav class="flex-content__nav">
+            <ul class="content-nav">
+              <li class="content-nav__el"><a href="#"><i class="fas fa-list-ul"></i> uncategorized</a></li>
+              <li class="content-nav__el"><a href="#"><i class="fas fa-tags"></i>wordpress</a></li>
+            </ul>
+          </nav>
+          <article class="flex-content__other">
+            <p>More of there posts need tags</p>
+          </article>
+           <hr class="flex-content__footer">
+
+          <time class="flex-content__date">
+           june 21, 2008 by theme admin
+          </time>
+           <h1 class="flex-content__title">More Tags</h1>
+          <nav class="flex-content__nav">
+            <ul class="content-nav">
+              <li class="content-nav__el"><a href="#"><i class="fas fa-list-ul"></i> uncategorized</a></li>
+              <li class="content-nav__el"><a href="#"><i class="fas fa-tags"></i>html, wordpress</a></li>
+               <li class="content-nav__el"><a href="#"><i class="far fa-comment"></i> 1 coment</a></li>
+            </ul>
+          </nav>
+          <article class="flex-content__other">
+            <p>What HTML tags would you like to see? <br>
+            Lets start with an unordered list:</p>
+            <ul>
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+            </ul>
+          </article>
+        </div>
         </section>
+        </div>
+        <footer class="flex-container__footer">
+          <p class="flex-container__footer_el">Сымпровизируем и добавим футтер</p>
+        </footer>
+    </div>
+        <!-- <i class="fas fa-bars"></i> -->
+        <!-- <i class="fas fa-tags"></i> -->
+        <!-- <i class="fas fa-list-ul"></i> -->
+        <!-- <i class="far fa-comment"></i> -->
+        
   </body>
 </html>
