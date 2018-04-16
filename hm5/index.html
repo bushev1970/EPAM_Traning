@@ -106,20 +106,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', end
             }
         input:invalid + label {
             top:3px; 
-            opacity:0; 
+            opacity:0;
+            }
+            input:valid {
+                
             }
         input:valid + label {
             top:-.4rem;
             color: gray;
-            }
-        input:focus {
-            outline:none; 
             }
         input:focus + label {
             opacity:1; 
             top:-.4rem;
             color:#489efe;
              }
+            input:focus {
+                outline: none;
+            }
+        input:focus::placeholder {
+            color:transparent;
+            }
     </style>
 </body>
 </html>
