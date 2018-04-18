@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+
+<body class="flex-container">
+
+    <!-- header -->
+    <header class="flex-container__header">
+        <main class="header">
+            <ul class="header__content">
+                <li class="header__el"><a href="#" class="header__el_hover">Help Center</a></li>
+                <li class="header__el"><a href="#" class="header__el_hover">Our Support</a></li>
+                <li class="header__el">
+                    <button class="avatar">
+                        <img src="img/avatar.jpg" alt="Avatar" class="avatar__img">
+                        <span class="avatar__name">John Doe</span>
+                        <i class="avatar__icon fas fa-chevron-circle-down"></i>
+                    </button>
+                </li>
+            </ul>
+        </main>
+    </header>
+
+    <!-- aside -->
+    <aside class="flex-container__aside">
+        <div class="add">
+            <button class="add__button"><i class="add__icon fas fa-plus"></i> add a book</button>
+        </div>
+        <nav class="nav">
+            <ul class="nav__box">
+                <li class="nav__el">
+                    <a href="#" class="nav__el_unfocused"><i class="fas fa-book nav__el_icon"></i> Now Reading</a>
+                </li>
+                <li class="nav__el">
+                    <a href="#" class="nav__el_unfocused"><i class="fas fa-globe nav__el_icon"></i> Browse</a>
+                </li>
+                <li class="nav__el">
+                    <a href="#" class="nav__el_unfocused"><i class="fas fa-shopping-cart nav__el_icon"></i> Buy Books</a>
+                </li>
+                <li class="nav__el">
+                    <a href="#" class="nav__el_unfocused"><i class="fas fa-star nav__el_icon"></i> Favorite Books</a>
+                </li>
+                <li class="nav__el">
+                    <a href="#" class="nav__el_unfocused"><i class="fas fa-list nav__el_icon"></i > Wishest</a>
+                </li>
+                <li class="nav__el">
+                    <a href="#" class="nav__el_unfocused"><i class="far fa-clock nav__el_icon"></i> History</a>
+                </li>
+            </ul>
+        </nav>
+        <menu class="categoties">
+            <ul class="categoties__box">
+                <li class="categoties__el">
+                    <i></i>
+                    <a href="#" class="categoties__el_style">Must Road Tides</a>
+                </li>
+                <li class="categoties__el">
+                    <i></i>
+                    <a href="#" class="categoties__el_style">Best Of List</a>
+                </li>
+                <li class="categoties__el">
+                    <i></i>
+                    <a href="#" class="categoties__el_style">Classic Novels</a>
+                </li>
+                <li class="categoties__el">
+                    <i></i>
+                    <a href="#" class="categoties__el_style">Nion Fiction</a></li>
+            </ul>
+        </menu>
+
+        <ul class="action-log">
+            <li class="action-log__event">
+                <i class="far fa-clock action-log__event_icon"></i>
+                <p class="action-log__p">You added 
+                    <strong class="action-log__event_strong">Fight club</strong> by
+                    <strong class="action-log__event_strong">Chuck Palahniuk</strong> to your
+                    <strong class="action-log__event_strong">Must Read Tites</strong>
+                </p>
+                <p class="action-log__time">24 minutes ago</p>
+            </li>
+            <li class="action-log__event">
+                <i class="far fa-clock action-log__event_icon"></i>
+                <p class="action-log__p">You added
+                    <strong class="action-log__event_strong">The Trial</strong> by
+                    <strong class="action-log__event_strong">Franz Kafka</strong> to your
+                    <strong class="action-log__event_strong">Must Read Tites</strong>
+                </p>
+                <p class="action-log__time">48 minutes ago</p>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- content -->
+    <section class="flex-container__content">
+        <header class="content-header">
+            <h1 class="content-header__title">Browse Available Books</h1>
+            <div class="filter">
+                <ul class="filter__elems">
+                    <li class="filter__elem">
+                        <button class="filter__elem_hover">All Books</button>
+                    </li>
+                    <li class="filter__elem">
+                        <button class="filter__elem_hover">Most Recent</button>
+                    </li class="filter__elem">
+                  <li>
+                    <button class="filter__elem_hover">Most Popular</button>
+                    </li>
+                    <li class="filter__elem">
+                        <button class="filter__elem_hover">Free Books</button>
+                    </li>
+                </ul>
+                <form action="" class="search">
+                    <input type="text" class="search__line" pattern=".+" required placeholder="Enter Keywords">
+                    <button class="search__submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </header>
+        <section class="wrapper">
+            <article class="wrapper__el">
+                <img class="wrapper__el_img" src="img/book-cover.jpg" alt="Book">
+                <h4 class="wrapper__name">Jewels of Nizam</h4>
+                <p class="wrapper__autor">by Geeta devi</p>
+                <ul class="count">
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                </ul>
+            </article>
+            <article class="wrapper__el">
+                <img  class="wrapper__el_img" src="img/book-cover2.jpg" alt="Book">
+                <h4 class="wrapper__name">Cakes & Bakes</h4>
+                <p class="wrapper__autor">by Sanjeev Kappor</p>
+                <ul class="count">
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                </ul>
+            </article>
+            <article class="wrapper__el">
+                <img class="wrapper__el_img" src="img/book-cover3.jpg" alt="Book">
+                <h4 class="wrapper__name">Jame's Kitchen</h4>
+                <p class="wrapper__autor">by Jamie Oliver</p>
+                <ul class="count">
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star-half"></i>
+                    </li>
+                </ul>
+            </article>
+            <article class="wrapper__el">
+                <img class="wrapper__el_img" src="img/book-cover4.jpg" alt="Book">
+                <h4 class="wrapper__name">Inexpensive Family Meals</h4>
+                <p class="wrapper__autor">by Simon hoist</p>
+                <ul class="count">
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="far fa-star"></i>
+                    </li>
+                </ul>
+            </article>
+            <article class="wrapper__el">
+                <img class="wrapper__el_img" src="img/book-cover5.jpg" alt="Book">
+                <h4 class="wrapper__name">Poleo Slow Cooking</h4>
+                <p class="wrapper__autor">by Chissy Gower</p>
+                <ul class="count">
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star-half"></i>
+                    </li>
+                </ul>
+            </article>
+            <article class="wrapper__el">
+                <img class="wrapper__el_img" src="img/book-cover6.jpg" alt="Book">
+                <h4 class="wrapper__name">Cook Like an Italian</h4>
+                <p class="wrapper__autor">by Todie Puttock</p>
+                <ul class="count">
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="far fa-star"></i>
+                    </li>
+                </ul>
+            </article>
+            <article class="wrapper__el">
+                <img class="wrapper__el_img" src="img/book-cover7.jpg" alt="Book">
+                <h4 class="wrapper__name">Suneeta Vaswani</h4>
+                <p class="wrapper__autor">by Geeta Devi</p>
+                <ul class="count">
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                </ul>
+            </article>
+            <article class="wrapper__el">
+                <img class="wrapper__el_img" src="img/book-cover8.jpg" alt="Book">
+                <h4 class="wrapper__name">Jamie Does</h4>
+                <p class="wrapper__autor">by Jamie Oliver</p>
+                <ul class="count">
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="far fa-star"></i>
+                    </li>
+                </ul>
+            </article>
+            <article class="wrapper__el">
+                <img class="wrapper__el_img" class="wrapper__el_foto" src="img/book-cover9.jpg" alt="Book">
+                <h4 class="wrapper__name">Jamie's Italy</h4>
+                <p class="wrapper__autor">by Jamie Oliver</p>
+                <ul class="count">
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                </ul>
+            </article>
+            <article class="wrapper__el">
+                <img class="wrapper__el_img" src="img/book-cover10.jpg" alt="Book">
+                <h4 class="wrapper__name">Vegetables CookBook</h4>
+                <p class="wrapper__autor">by Matthew Biggs</p>
+                <ul class="count">
+                    <li class="count__star">
+                        <i class="count__star fas fa-star"n></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"n></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star"n></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="fas fa-star-half"></i>
+                    </li>
+                    <li class="count__star">
+                        <i class="far fa-star"></i>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </section>
+
+    <!-- footer -->
+    <footer class="flex-container__footer">
+        <button class="flex-container__el"><i class="flex-container_icon fas fa-question-circle"></i></button>
+        <button class="flex-container__el"><i class="flex-container_icon fas fa-cog"></i></button>
+    </footer>
+
+</body>
+
+</html>
