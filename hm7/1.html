@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="el1">1</div>
+    <div id="el2">2</div>
+
+    <style>
+        #el1 {
+            background: gray;
+        }
+        #el2 {
+            background: blue;
+        }
+    </style>
+
+</body>
+
+</html><script>
+
+    const elem1 = document.getElementById('el1');
+    const elem2 = document.getElementById('el2');
+
+    function prepend(container, newEl) {
+         container.insertBefore(newEl, null);
+    }
+    prepend(elem1, elem2);
+
+</script>
