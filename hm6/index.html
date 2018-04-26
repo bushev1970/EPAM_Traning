@@ -35,7 +35,15 @@
     <!-- aside -->
     <aside class="flex-container__aside">
         <div class="add">
-            <button class="add__button"><i class="add__icon fas fa-plus"></i> add a book</button>
+            <button class="add__button" id="open"><i class="add__icon fas fa-plus"></i> add a book</button>
+            <div class="pop-ap" id="block">
+                <input type="email" placeholder="Your email" class="pop-ap__input">
+                <input type="password" placeholder="Your password" class="pop-ap__input">
+                <input type="submit" value="Buy" class="pop-ap__submit">
+                <div class="pop-ap__icon" id="close">
+                    <i class="pop-ap__icon_hover fas fa-times"></i>
+                </div>
+            </div>
         </div>
         <nav class="nav">
             <ul class="nav__box">
@@ -108,241 +116,241 @@
             <div class="filter">
                 <ul class="filter__elems">
                     <li class="filter__elem">
-                        <button class="filter__elem_hover">All Books</button>
+                        <button class="filter__elem_hover" id="all">All Books</button>
                     </li>
                     <li class="filter__elem">
-                        <button class="filter__elem_hover">Most Recent</button>
+                        <button class="filter__elem_hover" id="recent">Most Recent</button>
                     </li class="filter__elem">
                   <li>
-                    <button class="filter__elem_hover">Most Popular</button>
+                    <button class="filter__elem_hover" id="most">Most Popular</button>
                     </li>
                     <li class="filter__elem">
-                        <button class="filter__elem_hover">Free Books</button>
+                        <button class="filter__elem_hover" id="free">Free Books</button>
                     </li>
                 </ul>
                 <form action="" class="search">
-                    <input type="text" class="search__line" pattern=".+" required placeholder="Enter Keywords">
-                    <button class="search__submit"><i class="fas fa-search"></i></button>
+                    <input type="text" class="search__line" id="search-input" required placeholder="Enter Keywords">
+                    <button class="search__submit" id="search-button" onclick="event.preventDefault()"><i class="fas fa-search"></i></button>
                 </form>
             </div>
         </header>
-        <section class="wrapper">
-            <article class="wrapper__el">
+        <section class="wrapper" id="wrapper">
+            <article id = "obj1" class="wrapper__el">
                 <img class="wrapper__el_img" src="img/book-cover.jpg" alt="Book">
-                <h4 class="wrapper__name">Jewels of Nizam</h4>
-                <p class="wrapper__autor">by Geeta devi</p>
+                <h4 class="wrapper__name filtred">Jewels of Nizam</h4>
+                <p class="wrapper__autor filtred">by Geeta devi</p>
                 <ul class="count">
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
                 </ul>
             </article>
-            <article class="wrapper__el">
+            <article id = "obj2" class="wrapper__el">
                 <img  class="wrapper__el_img" src="img/book-cover2.jpg" alt="Book">
-                <h4 class="wrapper__name">Cakes & Bakes</h4>
-                <p class="wrapper__autor">by Sanjeev Kappor</p>
+                <h4 class="wrapper__name filtred">Cakes & Bakes</h4>
+                <p class="wrapper__autor filtred">by Sanjeev Kappor</p>
                 <ul class="count">
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
-                        <i class="fas fa-star"></i>
+                    <li class="count__star" data-number='0'>
+                        <i class="far fa-star"></i>
                     </li>
-                    <li class="count__star">
-                        <i class="fas fa-star"></i>
+                    <li class="count__star" data-number='0'>
+                        <i class="far fa-star"></i>
                     </li>
                 </ul>
             </article>
-            <article class="wrapper__el">
+            <article id = "obj3" class="wrapper__el">
                 <img class="wrapper__el_img" src="img/book-cover3.jpg" alt="Book">
-                <h4 class="wrapper__name">Jame's Kitchen</h4>
-                <p class="wrapper__autor">by Jamie Oliver</p>
+                <h4 class="wrapper__name filtred">Jame's Kitchen</h4>
+                <p class="wrapper__autor filtred">by Jamie Oliver</p>
                 <ul class="count">
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='0.5'>
                         <i class="fas fa-star-half"></i>
                     </li>
                 </ul>
             </article>
-            <article class="wrapper__el">
+            <article id = "obj4" class="wrapper__el">
                 <img class="wrapper__el_img" src="img/book-cover4.jpg" alt="Book">
-                <h4 class="wrapper__name">Inexpensive Family Meals</h4>
-                <p class="wrapper__autor">by Simon hoist</p>
+                <h4 class="wrapper__name filtred">Inexpensive Family Meals</h4>
+                <p class="wrapper__autor filtred">by Simon hoist</p>
                 <ul class="count">
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='0'>
                         <i class="far fa-star"></i>
                     </li>
                 </ul>
             </article>
-            <article class="wrapper__el">
+            <article id = "obj5" class="wrapper__el">
                 <img class="wrapper__el_img" src="img/book-cover5.jpg" alt="Book">
-                <h4 class="wrapper__name">Poleo Slow Cooking</h4>
-                <p class="wrapper__autor">by Chissy Gower</p>
+                <h4 class="wrapper__name filtred">Poleo Slow Cooking</h4>
+                <p class="wrapper__autor filtred">by Chissy Gower</p>
                 <ul class="count">
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='0.5'>
                         <i class="fas fa-star-half"></i>
                     </li>
                 </ul>
             </article>
-            <article class="wrapper__el">
+            <article id = "obj6" class="wrapper__el">
                 <img class="wrapper__el_img" src="img/book-cover6.jpg" alt="Book">
-                <h4 class="wrapper__name">Cook Like an Italian</h4>
-                <p class="wrapper__autor">by Todie Puttock</p>
+                <h4 class="wrapper__name filtred">Cook Like an Italian</h4>
+                <p class="wrapper__autor filtred">by Todie Puttock</p>
                 <ul class="count">
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='0'>
                         <i class="far fa-star"></i>
                     </li>
                 </ul>
             </article>
-            <article class="wrapper__el">
+            <article id = "obj7" class="wrapper__el">
                 <img class="wrapper__el_img" src="img/book-cover7.jpg" alt="Book">
-                <h4 class="wrapper__name">Suneeta Vaswani</h4>
-                <p class="wrapper__autor">by Geeta Devi</p>
+                <h4 class="wrapper__name filtred">Suneeta Vaswani</h4>
+                <p class="wrapper__autor filtred">by Geeta Devi</p>
                 <ul class="count">
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
-                        <i class="fas fa-star"></i>
+                    <li class="count__star" data-number='0'>
+                        <i class="far fa-star"></i>
                     </li>
-                    <li class="count__star">
-                        <i class="fas fa-star"></i>
+                    <li class="count__star" data-number='0'>
+                        <i class="far fa-star"></i>
                     </li>
-                    <li class="count__star">
-                        <i class="fas fa-star"></i>
-                    </li>
-                </ul>
-            </article>
-            <article class="wrapper__el">
-                <img class="wrapper__el_img" src="img/book-cover8.jpg" alt="Book">
-                <h4 class="wrapper__name">Jamie Does</h4>
-                <p class="wrapper__autor">by Jamie Oliver</p>
-                <ul class="count">
-                    <li class="count__star">
-                        <i class="fas fa-star"></i>
-                    </li>
-                    <li class="count__star">
-                        <i class="fas fa-star"></i>
-                    </li>
-                    <li class="count__star">
-                        <i class="fas fa-star"></i>
-                    </li>
-                    <li class="count__star">
-                        <i class="fas fa-star"></i>
-                    </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='0'>
                         <i class="far fa-star"></i>
                     </li>
                 </ul>
             </article>
-            <article class="wrapper__el">
-                <img class="wrapper__el_img" class="wrapper__el_foto" src="img/book-cover9.jpg" alt="Book">
-                <h4 class="wrapper__name">Jamie's Italy</h4>
-                <p class="wrapper__autor">by Jamie Oliver</p>
+            <article id = "obj8" class="wrapper__el">
+                <img class="wrapper__el_img" src="img/book-cover8.jpg" alt="Book">
+                <h4 class="wrapper__name filtred">Jamie Does</h4>
+                <p class="wrapper__autor filtred">by Jamie Oliver</p>
                 <ul class="count">
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='0'>
+                        <i class="far fa-star"></i>
+                    </li>
+                </ul>
+            </article>
+            <article id = "obj9" class="wrapper__el">
+                <img class="wrapper__el_img" class="wrapper__el_foto" src="img/book-cover9.jpg" alt="Book">
+                <h4 class="wrapper__name filtred">Jamie's Italy</h4>
+                <p class="wrapper__autor filtred">by Jamie Oliver</p>
+                <ul class="count">
+                    <li class="count__star" data-number='1'>
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star" data-number='1'>
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star" data-number='1'>
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star" data-number='1'>
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"></i>
                     </li>
                 </ul>
             </article>
-            <article class="wrapper__el">
+            <article id = "obj10" class="wrapper__el">
                 <img class="wrapper__el_img" src="img/book-cover10.jpg" alt="Book">
-                <h4 class="wrapper__name">Vegetables CookBook</h4>
-                <p class="wrapper__autor">by Matthew Biggs</p>
+                <h4 class="wrapper__name filtred">Vegetables CookBook</h4>
+                <p class="wrapper__autor filtred">by Matthew Biggs</p>
                 <ul class="count">
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="count__star fas fa-star"n></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"n></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='1'>
                         <i class="fas fa-star"n></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='0.5'>
                         <i class="fas fa-star-half"></i>
                     </li>
-                    <li class="count__star">
+                    <li class="count__star" data-number='0'>
                         <i class="far fa-star"></i>
                     </li>
                 </ul>
@@ -356,6 +364,7 @@
         <button class="flex-container__el"><i class="flex-container_icon fas fa-cog"></i></button>
     </footer>
 
+        <script src="script.js"></script>
 </body>
 
 </html>
