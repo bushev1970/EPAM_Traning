@@ -49,9 +49,9 @@ $reg: 'Proxima Nova Rg';
 }
 .flex-container {
     align-items: stretch;
+    flex-direction: column;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1320px;
     min-width: 320px;
     margin: 0 auto;
 }
@@ -60,7 +60,6 @@ $reg: 'Proxima Nova Rg';
 }
 /* header */
 .flex-container__header {
-    flex-basis: 1320px;
     background: $dark;
     border-radius: 5px 5px 0 0;
 }
@@ -170,31 +169,62 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181e2c', end
 
 /* pop-ap*/
 .pop-ap {
+    z-index: 1000;
     display: none;
-    position: absolute;
-    top: 2.9rem;
-    left: 14rem;
-    background-color: $dark;
-    border: 1px solid $dark;
-    &::before {
-        content: '';
-        position: absolute;
-        top: -.1rem;
-        left: -1.5rem;
-        transform: scale(10px);
-        border: .8rem solid transparent;
-        border-right: .7rem solid $dark;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(47, 54, 74, .6);
+    &__content {
+        position: fixed;
+        left: calc(50% - 15rem);
+        top: 50%;
     }
     &__input {
-        color: $steel-three;
+        font-size: 1.2rem;
+        color: $white;
         outline: none;
         padding: .2rem;
         margin: 1rem 1rem 0 1rem;
         border: none;
         background: none;
-        border-bottom: 1px solid $dark-four;
+        border-bottom: 1px solid $pale-grey;
+        &::placeholder {
+            color: $pale-grey;
+        }
+        &:invalid + .pop-ap_focus_label{
+            top:3px; 
+            opacity:0;
+        }
+        &:valid + .pop-ap_focus_label{
+            top:-.4rem;
+            opacity:0; 
+        }
+        &:focus + .pop-ap_focus_label{
+            opacity:1; 
+            top:-.4rem;
+            color: $faded-orange;
+        }
+        &:focus::placeholder{
+            color: rgba(255,255,255,0);
+        }
+    }
+    &_focus {
+        display: inline-block;
+        position: relative;
+        &_label {
+            color: $pale-grey;
+            position: absolute;
+            left:1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all .2s linear; 
+        }
     }
     &__submit {
+        font-size: 1.1rem;
         outline: none;
         cursor: pointer;
         border-radius: 2px;
@@ -202,7 +232,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181e2c', end
         text-transform: uppercase;
         font-weight: bold;
         margin: 1rem 0;
-        padding: .3rem 1rem;
+        padding: .4rem 1.2rem;
         background: $faded-orange;
         border: none;
         transition: background .3s ease;
@@ -211,16 +241,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181e2c', end
         }
     }
      &__icon {
+        transform: translateY(-.05rem);
+        transform: translateX(-.5rem);
+        display: inline-block;
+        padding: 7px 0;
+        border-radius: 2px;
+        width: 2.4rem;
         cursor: pointer;
-        position: absolute;
-        top: 0;
-        right: 3px;
-        color: $bluey-grey;
-        &_hover {
-            transition: color .3s ease;
-            &:hover {
-            color: $white;
-        }
+        color: $white;
+        transition: color .3s ease;
+        background: $faded-orange;
+        &:hover {
+            background: #ffab00;
         }
     }
 } 
@@ -325,6 +357,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181e2c', end
 .action-log {
     margin-bottom: 0;
     border-bottom: none;
+}
+.wrap {
+    display: flex;
 }
 /* content */
 .flex-container__content {

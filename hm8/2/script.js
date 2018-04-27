@@ -11,11 +11,12 @@ function newEl(){
         return rand;
     }
     div.style.width = randomInteger(0, 300) + 'px';
-    div.style.left = randomInteger(0, 900) + 'px';
+    div.style.left = randomInteger(0, 1500) + 'px';
     div.style.top = randomInteger(0, 600) + 'px';
     div.style.position = 'absolute';
     div.style.height = randomInteger(0, 300) + 'px';
     div.style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    div.style.opacity = randomInteger(0.3, 1);
     block.appendChild(div);
 };
 
