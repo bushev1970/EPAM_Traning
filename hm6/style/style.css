@@ -99,7 +99,14 @@
   margin: 0;
   height: 100%;
   color: #ffffff;
-  padding: .4rem 0; }
+  padding: .4rem 0;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease; }
+  .header .avatar:hover {
+    background: #f2795a; }
+  .header .avatar:hover .fa-chevron-circle-down {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   .header .avatar__img {
     margin-left: .7rem;
     border-radius: 100%; }
@@ -107,6 +114,8 @@
     font-size: .8rem;
     margin-left: .7rem; }
   .header .avatar .fa-chevron-circle-down {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
     font-size: .8rem;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -133,6 +142,8 @@
   text-align: center;
   padding: 2.2rem 1.25rem 2.5rem 1.25rem; }
   .add__icon {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
     margin-right: 1rem; }
   .add__button {
     outline: none;
@@ -150,6 +161,9 @@
     transition: background .3s ease; }
     .add__button:hover {
       background: #ffab00; }
+    .add__button:hover .add__icon {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg); }
 
 /* pop-ap*/
 .pop-ap {
@@ -499,7 +513,7 @@
 .flex-container__el {
   -webkit-transition: background .3s ease;
   transition: background .3s ease;
-  height: 100%;
+  height: 2.8rem;
   width: 3.5rem;
   border: none;
   background: #1f2637;
