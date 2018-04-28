@@ -48,9 +48,10 @@ $reg: 'Proxima Nova Rg';
     box-sizing: border-box;
 }
 .flex-container {
+    align-items: stretch;
+    flex-direction: column;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1320px;
     min-width: 320px;
     margin: 0 auto;
 }
@@ -59,7 +60,6 @@ $reg: 'Proxima Nova Rg';
 }
 /* header */
 .flex-container__header {
-    flex-basis: 1320px;
     background: $dark;
     border-radius: 5px 5px 0 0;
 }
@@ -132,9 +132,15 @@ $reg: 'Proxima Nova Rg';
 /* aside */
 .flex-container__aside {
     max-width: 12.5rem;
-    background: $dark-three;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#181e2c+0,1f2637+51,1f2637+71,1f2637+100 */
+background: rgb(24,30,44); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(24,30,44,1) 0%, rgba(31,38,55,1) 51%, rgba(31,38,55,1) 71%, rgba(31,38,55,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(24,30,44,1) 0%,rgba(31,38,55,1) 51%,rgba(31,38,55,1) 71%,rgba(31,38,55,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(24,30,44,1) 0%,rgba(31,38,55,1) 51%,rgba(31,38,55,1) 71%,rgba(31,38,55,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181e2c', endColorstr='#1f2637',GradientType=0 ); /* IE6-9 */
 }
 .add {
+    position: relative;
     background: $dark-two;
     border-bottom: 1px solid $dark-five;
     text-align: center;
@@ -143,6 +149,7 @@ $reg: 'Proxima Nova Rg';
         margin-right: 1rem;
     }
     &__button {
+        outline: none;
         font-size: 1rem;
         cursor: pointer;
         border-radius: 4px;
@@ -159,6 +166,96 @@ $reg: 'Proxima Nova Rg';
         }
     }
 }
+
+/* pop-ap*/
+.pop-ap {
+    z-index: 1000;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(47, 54, 74, .6);
+    &__content {
+        position: fixed;
+        left: calc(50% - 15rem);
+        top: 50%;
+    }
+    &__input {
+        font-size: 1.2rem;
+        color: $white;
+        outline: none;
+        padding: .2rem;
+        margin: 1rem 1rem 0 1rem;
+        border: none;
+        background: none;
+        border-bottom: 1px solid $pale-grey;
+        &::placeholder {
+            color: $pale-grey;
+        }
+        &:invalid + .pop-ap_focus_label{
+            top:3px; 
+            opacity:0;
+        }
+        &:valid + .pop-ap_focus_label{
+            top:-.4rem;
+            opacity:0; 
+        }
+        &:focus + .pop-ap_focus_label{
+            opacity:1; 
+            top:-.4rem;
+            color: $faded-orange;
+        }
+        &:focus::placeholder{
+            color: rgba(255,255,255,0);
+        }
+    }
+    &_focus {
+        display: inline-block;
+        position: relative;
+        &_label {
+            color: $pale-grey;
+            position: absolute;
+            left:1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all .2s linear; 
+        }
+    }
+    &__submit {
+        font-size: 1.1rem;
+        outline: none;
+        cursor: pointer;
+        border-radius: 2px;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 1rem 0;
+        padding: .4rem 1.2rem;
+        background: $faded-orange;
+        border: none;
+        transition: background .3s ease;
+        &:hover {
+            background: #ffab00;
+        }
+    }
+     &__icon {
+        transform: translateY(-.05rem);
+        transform: translateX(-.5rem);
+        display: inline-block;
+        padding: 7px 0;
+        border-radius: 2px;
+        width: 2.4rem;
+        cursor: pointer;
+        color: $white;
+        transition: color .3s ease;
+        background: $faded-orange;
+        &:hover {
+            background: #ffab00;
+        }
+    }
+} 
 
 .nav, .categoties {
     padding-bottom: .8rem;
@@ -226,7 +323,6 @@ $reg: 'Proxima Nova Rg';
     }
 }
 .action-log {
-    height: 40%;
     list-style: none;
     &__event {
         margin-top: 2.1rem;
@@ -258,9 +354,16 @@ $reg: 'Proxima Nova Rg';
     border-top: 1px solid $steel-two;
     border-bottom: 1px solid $dark-five;
 }
-
+.action-log {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+.wrap {
+    display: flex;
+}
 /* content */
 .flex-container__content {
+    min-height: 52rem;
     width: calc(100% - 12.5rem);
 }
 .content-header {
@@ -285,6 +388,7 @@ $reg: 'Proxima Nova Rg';
         display: flex;
     }
     &__elem_hover {
+        outline: none;
         cursor: pointer;
         margin-left: 1.2rem;
         font-size: .75rem;
@@ -324,6 +428,7 @@ $reg: 'Proxima Nova Rg';
         }
     }
     &__submit {
+        outline: none;
         cursor: pointer;
         color: $bluey-grey;
         position: absolute;
@@ -342,13 +447,22 @@ $reg: 'Proxima Nova Rg';
     }
 }
 .wrapper {
+    margin-bottom: .8rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     &__el {
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 5px;
         margin-top: 1.8rem;
+        transition: background .3s ease;
+        &:hover {
+            background: $pale-grey;
+        }
         &_img {
-          max-width: 100%;
+            border-radius: 5px;
+            max-width: 100%;
         }
     }
     &__name {
@@ -375,26 +489,7 @@ $reg: 'Proxima Nova Rg';
 }
 
 /* media */
-@media screen and (max-width: 1200px) {
-    .action-log {
-        height: 60%;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .action-log {
-        height: 69%;
-    }
-}
-@media screen and (max-width: 800px) {
-    .action-log {
-        height: 75%;
-    }
-}
-@media screen and (max-width: 600px) {
-    .action-log {
-        height: 87%;
-    }
-}
+
 @media screen and (max-width: 850px) {
     .filter {
         flex-direction: column-reverse;
@@ -414,7 +509,6 @@ $reg: 'Proxima Nova Rg';
 /* footer */
 .flex-container__footer {
     border-radius: 0 0 5px 5px;
-    margin-top: .8rem;
     width: 100%;
     background: $dark-three;
     min-height: 2.81rem;
@@ -456,9 +550,6 @@ $reg: 'Proxima Nova Rg';
     .add__icon {
         margin: 0;
     }
-    .action-log {
-        height: 89%;
-    }
     .flex-container__content {
     width: calc(100% - 10rem);
     }
@@ -489,10 +580,5 @@ $reg: 'Proxima Nova Rg';
     .wrapper__el {
         margin-left: 5px;
         margin-right: 5px;
-    }
-}
-@media screen and (max-width: 330px) {
-    .action-log {
-        height: 88%;
     }
 }
