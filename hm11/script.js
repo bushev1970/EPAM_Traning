@@ -2,9 +2,9 @@ window.onload = function(){
 
     function time(f) { var timerId;
 
-        return function (...args) {
+        return function (arguments) {
             var onComplete = function () {
-                f.apply(this, args);
+                f.apply(this, arguments);
                 timerId = null;
             }
 
