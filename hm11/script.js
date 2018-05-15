@@ -4,7 +4,7 @@ window.onload = function(){
 
         return function (arguments) {
             var onComplete = function () {
-                f.apply(this, arguments);
+                f.apply(this);
                 timerId = null;
             }
 
